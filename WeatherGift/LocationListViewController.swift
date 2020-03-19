@@ -16,19 +16,22 @@ class LocationListViewController: UIViewController {
     @IBOutlet weak var addLocationButton: UIBarButtonItem!
     
     var weatherLocations = [WeatherLocation]()
+    var selectedLocationIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        var weatherLocation = WeatherLocation(name: "Chestnut Hill", latitude: 0, longitude: 0)
-        weatherLocations.append(weatherLocation)
-        weatherLocation = WeatherLocation(name: "Buenos Aires, Argentina", latitude: 0, longitude: 0)
-        weatherLocations.append(weatherLocation)
-        weatherLocation = WeatherLocation(name: "Lilongwe, Malawi", latitude: 0, longitude: 0)
-        weatherLocations.append(weatherLocation)
+        
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        selectedLocationIndex = tableView.indexPathForSelectedRow!.row
+    }
+    
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
         if tableView.isEditing {
             tableView.setEditing(false, animated: true)
