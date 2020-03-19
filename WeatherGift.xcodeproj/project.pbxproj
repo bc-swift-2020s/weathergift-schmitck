@@ -10,7 +10,7 @@
 		02A75BD4A609428413C1E372 /* libPods-WeatherGift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1749EF60331D8E7761427CA /* libPods-WeatherGift.a */; };
 		342C2D672416B8EC0049AEE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342C2D662416B8EC0049AEE8 /* AppDelegate.swift */; };
 		342C2D692416B8EC0049AEE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342C2D682416B8EC0049AEE8 /* SceneDelegate.swift */; };
-		342C2D6B2416B8EC0049AEE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342C2D6A2416B8EC0049AEE8 /* ViewController.swift */; };
+		342C2D6B2416B8EC0049AEE8 /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342C2D6A2416B8EC0049AEE8 /* LocationListViewController.swift */; };
 		342C2D6E2416B8EC0049AEE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 342C2D6C2416B8EC0049AEE8 /* Main.storyboard */; };
 		342C2D702416B8F10049AEE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 342C2D6F2416B8F10049AEE8 /* Assets.xcassets */; };
 		342C2D732416B8F10049AEE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 342C2D712416B8F10049AEE8 /* LaunchScreen.storyboard */; };
@@ -23,7 +23,7 @@
 		342C2D632416B8EC0049AEE8 /* WeatherGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		342C2D662416B8EC0049AEE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		342C2D682416B8EC0049AEE8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		342C2D6A2416B8EC0049AEE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		342C2D6A2416B8EC0049AEE8 /* LocationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewController.swift; sourceTree = "<group>"; };
 		342C2D6D2416B8EC0049AEE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		342C2D6F2416B8F10049AEE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		342C2D722416B8F10049AEE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 				342C2D7A2416B9010049AEE8 /* File.swift */,
 				342C2D662416B8EC0049AEE8 /* AppDelegate.swift */,
 				342C2D682416B8EC0049AEE8 /* SceneDelegate.swift */,
-				342C2D6A2416B8EC0049AEE8 /* ViewController.swift */,
+				342C2D6A2416B8EC0049AEE8 /* LocationListViewController.swift */,
 				342C2D6C2416B8EC0049AEE8 /* Main.storyboard */,
 				342C2D6F2416B8F10049AEE8 /* Assets.xcassets */,
 				342C2D712416B8F10049AEE8 /* LaunchScreen.storyboard */,
@@ -212,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				342C2D6B2416B8EC0049AEE8 /* ViewController.swift in Sources */,
+				342C2D6B2416B8EC0049AEE8 /* LocationListViewController.swift in Sources */,
 				34B99AB5242411AA002AC158 /* APIKeys.swift in Sources */,
 				342C2D7B2416B9010049AEE8 /* File.swift in Sources */,
 				342C2D672416B8EC0049AEE8 /* AppDelegate.swift in Sources */,
