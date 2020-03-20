@@ -17,38 +17,21 @@ class LocationDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var weatherLocation: WeatherLocation!
-    var weatherLocations: [WeatherLocation] = []
+    var locationIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if weatherLocation == nil {
-           weatherLocation = WeatherLocation(name: "Current Location", latitude: 0.0, longitude: 0.0)
-        }
-        weatherLocations.append(weatherLocation)
         //right before we update our user interface
-        loadLocations()
         updateUserInterface()
     }
     
-    func loadLocations() {
-        //read data from key
-        guard let locationsEncoded = UserDefaults.standard.value(forKey: "weatherLocations") as? Data else {
-            print("WARNING: Could not load weatherLocations data")
-            return
-        }
-        let decoder = JSONDecoder()
-        //creates a local constant
-        if let weatherLocations = try? decoder.decode(Array.self, from: locationsEncoded) as [WeatherLocation] {
-            //points to weatherLocations in the classwide property
-            //takes what we just decoded and assign that to the classwide property
-            self.weatherLocations = weatherLocations
-        } else {
-            print("ERROR: Couldn't decode data read from user defaults")
-        }
-        
-    }
     
     func updateUserInterface() {
+        //get first element in viewController and then makes it rootViewController
+        let pageViewController = UIApplication.shared.windows.first!.rootViewController as! PageViewController
+        //current posiition of the current page in the array of indeces
+        weatherLocation = pageViewController.weatherLocations[locationIndex]
+        
         dateLabel.text = ""
         placeLabel.text = weatherLocation.name
         temperatureLabel.text = " --°"
@@ -57,13 +40,16 @@ class LocationDetailViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as! LocationListViewController
-        destination.weatherLocations = weatherLocations
+        let pageViewController = UIApplication.shared.windows.first!.rootViewController as! PageViewController
+        
+        destination.weatherLocations = pageViewController.weatherLocations
     }
     
     @IBAction func unwindFromLocationListViewController(segue: UIStoryboardSegue) {
         let source = segue.source as! LocationListViewController
-        weatherLocations = source.weatherLocations
-        weatherLocation = weatherLocations[source.selectedLocationIndex]
-        updateUserInterface()
+        locationIndex = source.selectedLocationIndex
+        let pageViewController = UIApplication.shared.windows.first!.rootViewController as! PageViewController
+        pageViewController.weatherLocations = source.weatherLocations
+        pageViewController.setViewControllers([pageViewController.createLocationDetailViewController(forPage: locationIndex)], direction: .forward, animated: false, completion: nil)
     }
 }
