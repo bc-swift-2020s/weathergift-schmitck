@@ -15,7 +15,7 @@ class LocationListViewController: UIViewController {
     @IBOutlet weak var editBarButton: UIBarButtonItem!
     @IBOutlet weak var addLocationButton: UIBarButtonItem!
     
-    var weatherLocations = [WeatherLocation]()
+    var weatherLocations: [WeatherLocation] = []
     var selectedLocationIndex = 0
     
     override func viewDidLoad() {
@@ -26,10 +26,19 @@ class LocationListViewController: UIViewController {
         tableView.delegate = self
     }
     
-    
+    func saveLocation() {
+        //encoder = object, JSONEcoder = class
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(weatherLocations) {
+            UserDefaults.standard.set(encoded, forKey: "weatherLocations")
+        } else {
+            print("ERROR")
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         selectedLocationIndex = tableView.indexPathForSelectedRow!.row
+        saveLocation()
     }
     
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
