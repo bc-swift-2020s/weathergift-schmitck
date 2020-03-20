@@ -113,9 +113,22 @@
                                     <constraint firstAttribute="height" constant="44" id="be0-I1-C6Y"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="About" id="sih-eo-Ehv"/>
+                                    <barButtonItem title="About" width="80.5" id="sih-eo-Ehv"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Q6B-rD-VeG"/>
+                                    <barButtonItem style="plain" id="PA9-hS-Vkr">
+                                        <pageControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="Uxn-yL-Pv0">
+                                            <rect key="frame" x="75" y="3.5" width="170" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="pageIndicatorTintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="pageControlTapped:" destination="hrD-3c-lU5" eventType="valueChanged" id="wyO-2u-Lzw"/>
+                                            </connections>
+                                        </pageControl>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Do4-nh-gTn"/>
-                                    <barButtonItem title="Item" image="list.bullet" catalog="system" id="R6K-qv-pdM">
+                                    <barButtonItem title="Item" image="list.bullet" catalog="system" width="54.5" id="R6K-qv-pdM">
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="uOl-cT-L0t"/>
                                         </connections>
@@ -154,7 +167,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sun.max" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jVK-hd-5Vx">
-                                        <rect key="frame" x="8" y="8" width="103" height="209"/>
+                                        <rect key="frame" x="8" y="8" width="102" height="209"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
@@ -179,6 +192,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="qmt-u9-ukH" id="uZ0-f7-U48"/>
                         <outlet property="imageView" destination="jVK-hd-5Vx" id="bgq-SM-M7T"/>
+                        <outlet property="pageControl" destination="Uxn-yL-Pv0" id="9wy-Cs-KAo"/>
                         <outlet property="placeLabel" destination="4kZ-OE-fds" id="dXR-Vr-XzL"/>
                         <outlet property="summaryLabel" destination="jKc-0a-elL" id="YmF-Ll-HkK"/>
                         <outlet property="temperatureLabel" destination="gQu-E8-O47" id="zZF-TT-Rgy"/>
