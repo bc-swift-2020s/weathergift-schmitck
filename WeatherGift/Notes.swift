@@ -31,3 +31,20 @@
 ///4. Evaluate the results, which can include: data, response and error
 ///5. Call the .RESUME method on the task
 ///THE GET DATA FUNCTION IS A LEGO BLOCK
+
+//Parse = Filter out or extract specific data
+
+//Subclass: Based on another class
+///inhererts everything from PARENT CLASS
+///contains additional methods and stuff that you can add
+///UITableViewController
+///MORE methods or properties compared to PARENT class
+
+//JSON: Java Script Object Notation
+///organizes data in key value pairs
+///key is identifying string enclosed in quotes - "latitude"
+///value is assinged to the key "latitude": **42.832343423**
+
+//MARK: QUESTIONS
+///What is Codable again?
+
