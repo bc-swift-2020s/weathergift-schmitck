@@ -21,6 +21,7 @@
 		34B99AB5242411AA002AC158 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B99AB4242411AA002AC158 /* APIKeys.swift */; };
 		34B99AB724241D35002AC158 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B99AB624241D34002AC158 /* LocationDetailViewController.swift */; };
 		34D3D69D242FB6BF00D1BB44 /* DailyWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D3D69C242FB6BF00D1BB44 /* DailyWeatherCell.swift */; };
+		34D3D69F242FFB4100D1BB44 /* HourlyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D3D69E242FFB4100D1BB44 /* HourlyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		34B99AB4242411AA002AC158 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		34B99AB624241D34002AC158 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 		34D3D69C242FB6BF00D1BB44 /* DailyWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherCell.swift; sourceTree = "<group>"; };
+		34D3D69E242FFB4100D1BB44 /* HourlyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCollectionViewCell.swift; sourceTree = "<group>"; };
 		B40EA5C911C15F73FC69D03A /* Pods-WeatherGift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherGift.debug.xcconfig"; path = "Target Support Files/Pods-WeatherGift/Pods-WeatherGift.debug.xcconfig"; sourceTree = "<group>"; };
 		C1749EF60331D8E7761427CA /* libPods-WeatherGift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeatherGift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -85,6 +87,7 @@
 				342C2D6A2416B8EC0049AEE8 /* LocationListViewController.swift */,
 				34B99AB624241D34002AC158 /* LocationDetailViewController.swift */,
 				34D3D69C242FB6BF00D1BB44 /* DailyWeatherCell.swift */,
+				34D3D69E242FFB4100D1BB44 /* HourlyCollectionViewCell.swift */,
 				342C2D6C2416B8EC0049AEE8 /* Main.storyboard */,
 				342C2D6F2416B8F10049AEE8 /* Assets.xcassets */,
 				342C2D712416B8F10049AEE8 /* LaunchScreen.storyboard */,
@@ -229,6 +232,7 @@
 			files = (
 				342C2D6B2416B8EC0049AEE8 /* LocationListViewController.swift in Sources */,
 				345E3DE724251191004A9ED4 /* Notes.swift in Sources */,
+				34D3D69F242FFB4100D1BB44 /* HourlyCollectionViewCell.swift in Sources */,
 				34B99AB5242411AA002AC158 /* APIKeys.swift in Sources */,
 				342C2D7B2416B9010049AEE8 /* File.swift in Sources */,
 				34D3D69D242FB6BF00D1BB44 /* DailyWeatherCell.swift in Sources */,

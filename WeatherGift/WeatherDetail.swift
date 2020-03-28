@@ -130,6 +130,7 @@ class WeatherDetail: WeatherLocation {
                     print("Day: \(dailyWeather.dailyWeekday), High: \(dailyWeather.dailyHigh), Low: \(dailyWeather.dailyLow)")
                 }
                 
+                let lastHour = min(24, result.hourly.data.count)
                 for index in 0..<result.hourly.data.count {
                     let hour = Date(timeIntervalSince1970: result.hourly.data[index].time)
                     hourlyFormatter.timeZone = TimeZone(identifier: result.timezone)
