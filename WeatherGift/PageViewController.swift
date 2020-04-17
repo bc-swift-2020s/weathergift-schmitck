@@ -30,7 +30,7 @@ class PageViewController: UIPageViewController {
             //need to create first element in userArray
             print("WARNING: Could not load weatherLocations data")
             //TODO: Get User Location for the first element in weatherLocations
-            weatherLocations.append(WeatherLocation(name: "CURRENT LOCATION", latitude: 20.20, longitude: 20.20))
+            weatherLocations.append(WeatherLocation(name: "", latitude: 20.20, longitude: 20.20))
             return
         }
         let decoder = JSONDecoder()

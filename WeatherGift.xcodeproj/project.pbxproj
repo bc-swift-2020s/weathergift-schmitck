@@ -18,6 +18,8 @@
 		345E3DE724251191004A9ED4 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E3DE624251191004A9ED4 /* Notes.swift */; };
 		345E3DE924251663004A9ED4 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E3DE824251663004A9ED4 /* PageViewController.swift */; };
 		345E3DEB24265DF8004A9ED4 /* WeatherDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E3DEA24265DF8004A9ED4 /* WeatherDetail.swift */; };
+		349623922449EC6A00C2BB7E /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349623912449EC6A00C2BB7E /* UIViewController+alert.swift */; };
+		349623942449FAFC00C2BB7E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349623932449FAFC00C2BB7E /* AboutViewController.swift */; };
 		34B99AB5242411AA002AC158 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B99AB4242411AA002AC158 /* APIKeys.swift */; };
 		34B99AB724241D35002AC158 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B99AB624241D34002AC158 /* LocationDetailViewController.swift */; };
 		34D3D69D242FB6BF00D1BB44 /* DailyWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D3D69C242FB6BF00D1BB44 /* DailyWeatherCell.swift */; };
@@ -38,6 +40,8 @@
 		345E3DE624251191004A9ED4 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		345E3DE824251663004A9ED4 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		345E3DEA24265DF8004A9ED4 /* WeatherDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetail.swift; sourceTree = "<group>"; };
+		349623912449EC6A00C2BB7E /* UIViewController+alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
+		349623932449FAFC00C2BB7E /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		34B99AB4242411AA002AC158 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		34B99AB624241D34002AC158 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 		34D3D69C242FB6BF00D1BB44 /* DailyWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherCell.swift; sourceTree = "<group>"; };
@@ -84,8 +88,10 @@
 				345E3DE824251663004A9ED4 /* PageViewController.swift */,
 				342C2D662416B8EC0049AEE8 /* AppDelegate.swift */,
 				342C2D682416B8EC0049AEE8 /* SceneDelegate.swift */,
+				349623912449EC6A00C2BB7E /* UIViewController+alert.swift */,
 				342C2D6A2416B8EC0049AEE8 /* LocationListViewController.swift */,
 				34B99AB624241D34002AC158 /* LocationDetailViewController.swift */,
+				349623932449FAFC00C2BB7E /* AboutViewController.swift */,
 				34D3D69C242FB6BF00D1BB44 /* DailyWeatherCell.swift */,
 				34D3D69E242FFB4100D1BB44 /* HourlyCollectionViewCell.swift */,
 				342C2D6C2416B8EC0049AEE8 /* Main.storyboard */,
@@ -233,6 +239,7 @@
 				342C2D6B2416B8EC0049AEE8 /* LocationListViewController.swift in Sources */,
 				345E3DE724251191004A9ED4 /* Notes.swift in Sources */,
 				34D3D69F242FFB4100D1BB44 /* HourlyCollectionViewCell.swift in Sources */,
+				349623922449EC6A00C2BB7E /* UIViewController+alert.swift in Sources */,
 				34B99AB5242411AA002AC158 /* APIKeys.swift in Sources */,
 				342C2D7B2416B9010049AEE8 /* File.swift in Sources */,
 				34D3D69D242FB6BF00D1BB44 /* DailyWeatherCell.swift in Sources */,
@@ -240,6 +247,7 @@
 				34B99AB724241D35002AC158 /* LocationDetailViewController.swift in Sources */,
 				345E3DEB24265DF8004A9ED4 /* WeatherDetail.swift in Sources */,
 				342C2D692416B8EC0049AEE8 /* SceneDelegate.swift in Sources */,
+				349623942449FAFC00C2BB7E /* AboutViewController.swift in Sources */,
 				345E3DE924251663004A9ED4 /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

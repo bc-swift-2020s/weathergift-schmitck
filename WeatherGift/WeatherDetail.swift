@@ -103,7 +103,7 @@ class WeatherDetail: WeatherLocation {
         //get data with task
         let task = session.dataTask(with: url) { (data, response, error) in
             if let error = error {
-                print("ERROR: \(error.localizedDescription)")
+//                print("ERROR: \(error.localizedDescription)")
             }
                  //note: three are some additional things that coudl go wrong, but we should not experience them, so we'll ignore testing
             
@@ -127,7 +127,7 @@ class WeatherDetail: WeatherLocation {
                     let dailyLow = result.daily.data[index].temperatureLow
                     let dailyWeather = DailyWeatherData(dailyIcon: dailyIcon, dailyWeekday: dailyWeekday, dailySummary: dailySummary, dailyHigh: Int(dailyHigh.rounded()), dailyLow: Int(dailyLow.rounded()))
                     self.dailyWeatherData.append(dailyWeather)
-                    print("Day: \(dailyWeather.dailyWeekday), High: \(dailyWeather.dailyHigh), Low: \(dailyWeather.dailyLow)")
+//                    print("Day: \(dailyWeather.dailyWeekday), High: \(dailyWeather.dailyHigh), Low: \(dailyWeather.dailyLow)")
                 }
                 
                 let lastHour = min(24, result.hourly.data.count)
@@ -140,7 +140,7 @@ class WeatherDetail: WeatherLocation {
                     let hourlyIcon = result.hourly.data[index].icon
                     let hourly = HourlyWeatherData(hour: hourlyTime, hourlyIcon: hourlyIcon, hourlyTemperature: Int(hourlyTemperature), hourlyPrecipProbability: Int(precipProb*100))
                     self.hourlyWeatherData.append(hourly)
-                    print("Hour: \(hourly.hour), Temp: \(hourly.hourlyTemperature), Precipitation: \(hourly.hourlyPrecipProbability)% Icon: \(hourly.hourlyIcon)")
+//                    print("Hour: \(hourly.hour), Temp: \(hourly.hourlyTemperature), Precipitation: \(hourly.hourlyPrecipProbability)% Icon: \(hourly.hourlyIcon)")
                 }
                 
             } catch {

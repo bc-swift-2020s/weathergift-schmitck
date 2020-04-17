@@ -8,3 +8,5 @@ struct APIKey {
 struct APIurls{
     static let darkSkyURL = "https://api.darksky.net/forecast/"
 }
+
+

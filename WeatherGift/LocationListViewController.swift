@@ -80,7 +80,6 @@ extension LocationListViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = weatherLocations[indexPath.row].name
-        cell.detailTextLabel?.text = "Lat: \(weatherLocations[indexPath.row].latitude), Long: \(weatherLocations[indexPath.row].longitude)"
         return cell
     }
     
@@ -97,6 +96,23 @@ extension LocationListViewController: UITableViewDataSource, UITableViewDelegate
         weatherLocations.remove(at: sourceIndexPath.row)
         weatherLocations.insert(itemToMove, at: destinationIndexPath.row)
     }
+  
+  //MARK: - tableView Methods to Freeze the First Cell
+  
+  func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    return (indexPath.row != 0 ? true : false)
+  }
+  
+  func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+    return (indexPath.row != 0 ? true : false)
+  }
+  
+  func tableView(_ tableView: UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath {
+    //checks to see if it can be moved onto the proposed index path
+    //if it is 0, it is going to RETURN the source because YOU CANNOT PUT IT HERE, if not, then it is saying that it is cool to put the cell there.
+    return (proposedDestinationIndexPath.row == 0 ? sourceIndexPath : proposedDestinationIndexPath)
+  }
+  
 }
 
 extension LocationListViewController: GMSAutocompleteViewControllerDelegate {

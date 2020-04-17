@@ -48,3 +48,15 @@
 //MARK: QUESTIONS
 ///What is Codable again?
 
+
+//MARK: View Controller Life Cycle
+//viewDidLoad: detects when the view loads
+//viewWillAppear
+//viewDidAppear
+//These will fire differently
+///Weathergift: when both the detail and main view begin, all three are activated
+///when you pop or unwind from a show, the DIDLOAD doesn't load, but WILL and DIDAPPEAR do
+///when you come back from present modally, there is NOTHING
+///PAGEVIEW CONTROLLER
+/// - Might preload other views
+/// - Code might be executed earlier than wanted
